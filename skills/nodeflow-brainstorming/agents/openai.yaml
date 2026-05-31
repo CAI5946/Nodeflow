@@ -1,0 +1,4 @@
+interface:
+  display_name: "Nodeflow Brainstorming"
+  short_description: "在计划前澄清创意、新功能、架构、交互和行为变化需求。"
+  default_prompt: "使用 $nodeflow-brainstorming 澄清需求、锁定设计并生成确认后的 spec。"

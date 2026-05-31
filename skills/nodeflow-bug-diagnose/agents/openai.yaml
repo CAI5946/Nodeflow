@@ -1,0 +1,4 @@
+interface:
+  display_name: "Nodeflow Bug Diagnose"
+  short_description: "复现问题、读取证据并定位 bug 根因。"
+  default_prompt: "使用 $nodeflow-bug-diagnose 诊断这个 bug 的根因。"

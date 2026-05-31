@@ -1,0 +1,4 @@
+interface:
+  display_name: "Nodeflow Review"
+  short_description: "审查本地改动、风险、遗漏和测试缺口。"
+  default_prompt: "使用 $nodeflow-review 审查这次改动。"

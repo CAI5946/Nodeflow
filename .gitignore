@@ -1,0 +1,39 @@
+# Local environment
+.env
+.env.*
+*.log
+
+# Agent runtime and private local state
+.codex/
+.claude/
+.antigravitycli/
+.playwright-mcp/
+.cursor/
+.gemini/
+
+# Runtime caches
+node_modules/
+__pycache__/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Generated outputs
+coverage/
+reports/
+tmp/
+temp/
+
+# Local maintenance artifacts
+docs/plans/
+docs/specs/
+docs/reviews/
+docs/reports/
+docs/local/
+audits/
+scratch/
+*.tmp
+
+# Nodeflow runtime state
+docs/.nodeflow/
+**/docs/.nodeflow/

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Nodeflow Request Router"
+  short_description: "识别已有项目请求类型并选择初始路由。"
+  default_prompt: "使用 $nodeflow-request-router 识别这个现有项目请求的类型和下一节点。"

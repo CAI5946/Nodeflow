@@ -1,0 +1,4 @@
+interface:
+  display_name: "Nodeflow Brief"
+  short_description: "从粗略想法整理边界清晰的极简 BRIEF。"
+  default_prompt: "使用 $nodeflow-brief 从我的粗略想法整理并生成 docs/BRIEF.md。"

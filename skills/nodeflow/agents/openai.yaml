@@ -1,0 +1,4 @@
+interface:
+  display_name: "Nodeflow"
+  short_description: "统一入口，确认需求并编排最短安全节点链。"
+  default_prompt: "使用 $nodeflow 先确认需求，再生成 nodeflow 节点链。"

@@ -1,0 +1,28 @@
+{
+  "name": "nodeflow",
+  "version": "0.1.0",
+  "description": "Risk-adaptive workflow skills for coding agents.",
+  "author": {
+    "name": "Nodeflow contributors"
+  },
+  "license": "MIT",
+  "keywords": [
+    "agent",
+    "workflow",
+    "skills",
+    "planning",
+    "review"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Nodeflow",
+    "shortDescription": "Risk-adaptive workflow skills for coding agents.",
+    "longDescription": "Nodeflow provides one entry skill and focused workflow nodes for planning, execution, review, verification, release preparation, and handoff.",
+    "developerName": "Nodeflow contributors",
+    "category": "Productivity",
+    "capabilities": [
+      "Write"
+    ],
+    "defaultPrompt": "Use Nodeflow to plan and execute this task."
+  }
+}

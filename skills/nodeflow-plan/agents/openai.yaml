@@ -1,0 +1,4 @@
+interface:
+  display_name: "Nodeflow Plan"
+  short_description: "从规格或明确请求生成可执行任务计划。"
+  default_prompt: "使用 $nodeflow-plan 为这个需求生成可执行任务计划。"

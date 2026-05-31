@@ -1,0 +1,4 @@
+interface:
+  display_name: "Nodeflow Release Prep"
+  short_description: "按发布清单检查合规物料、打包测试和上架准备。"
+  default_prompt: "使用 $nodeflow-release-prep 引导我完成发布前检查。"

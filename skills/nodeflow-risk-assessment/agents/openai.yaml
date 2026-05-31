@@ -1,0 +1,4 @@
+interface:
+  display_name: "Nodeflow Risk Assessment"
+  short_description: "判断风险、影响范围、计划需求和验证要求。"
+  default_prompt: "使用 $nodeflow-risk-assessment 判断这次修改的风险和验证要求。"
