@@ -1,0 +1,4 @@
+interface:
+  display_name: "Nodeflow Validate"
+  short_description: "运行项目级验证并生成测试或验证报告。"
+  default_prompt: "使用 $nodeflow-validate 验证项目并生成验证报告。"

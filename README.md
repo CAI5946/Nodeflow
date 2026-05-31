@@ -56,7 +56,14 @@ Nodeflow includes a Claude plugin manifest:
 .claude-plugin/plugin.json
 ```
 
-Use Claude Code's plugin installation flow for GitHub-hosted plugins, then start a new thread so Claude can discover the bundled skills.
+Register the marketplace and install the plugin:
+
+```bash
+claude plugin marketplace add CAI5946/Nodeflow
+claude plugin install nodeflow@nodeflow
+```
+
+Start a new Claude Code thread so Claude can discover the bundled skills.
 
 ### Cursor
 
@@ -117,6 +124,7 @@ Use $nodeflow-verify before claiming this is done.
 - `skills/nodeflow-*`: specialized workflow nodes
 - `.codex-plugin/plugin.json`: Codex plugin manifest
 - `.agents/plugins/marketplace.json`: Codex marketplace manifest
+- `plugins/nodeflow/`: Codex marketplace package copy
 - `.claude-plugin/plugin.json`: Claude plugin manifest
 - `.cursor-plugin/plugin.json`: Cursor plugin manifest
 

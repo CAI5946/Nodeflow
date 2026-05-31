@@ -8,7 +8,7 @@
       "name": "nodeflow",
       "source": {
         "source": "local",
-        "path": "./"
+        "path": "./plugins/nodeflow"
       },
       "policy": {
         "installation": "AVAILABLE",

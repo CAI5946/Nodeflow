@@ -1,0 +1,4 @@
+interface:
+  display_name: "Nodeflow Change Spec"
+  short_description: "将复杂或高风险变更整理成可确认规格。"
+  default_prompt: "使用 $nodeflow-change-spec 为这个需求生成可确认规格。"

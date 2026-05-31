@@ -1,0 +1,4 @@
+interface:
+  display_name: "Nodeflow PRD"
+  short_description: "从想法或 BRIEF 生成扁平开发导向 PRD。"
+  default_prompt: "使用 $nodeflow-prd 从现有信息或 docs/BRIEF.md 生成 PRD。"

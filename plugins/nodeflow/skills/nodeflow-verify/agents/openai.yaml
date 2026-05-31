@@ -1,0 +1,4 @@
+interface:
+  display_name: "Nodeflow Verify"
+  short_description: "完成前运行最相关检查并记录新鲜验证证据。"
+  default_prompt: "使用 $nodeflow-verify 验证本次任务。"

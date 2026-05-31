@@ -1,0 +1,4 @@
+interface:
+  display_name: "Nodeflow Refactor"
+  short_description: "确认范围后执行不改变业务行为的小范围重构。"
+  default_prompt: "使用 $nodeflow-refactor 为这次重构确认范围和方案。"

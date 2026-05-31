@@ -1,0 +1,4 @@
+interface:
+  display_name: "Nodeflow Learn"
+  short_description: "引导式学习节点，在决策点交互式生成知识库条目。"
+  default_prompt: "使用 $nodeflow-learn 引导决策点学习并持久化知识。"

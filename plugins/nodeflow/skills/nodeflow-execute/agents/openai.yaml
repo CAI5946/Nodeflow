@@ -1,0 +1,4 @@
+interface:
+  display_name: "Nodeflow Execute"
+  short_description: "按计划执行代码或文档改动并记录必要证据。"
+  default_prompt: "使用 $nodeflow-execute 执行已确认的任务计划。"
