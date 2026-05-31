@@ -4,6 +4,8 @@ Nodeflow is distributed as a Codex plugin marketplace repository.
 
 The repository keeps the main skill library at root `skills/` for readability and cross-agent manifests. Codex marketplace installation uses the package copy at `plugins/nodeflow/`, because Codex marketplace entries resolve plugin roots from `./plugins/<name>`.
 
+The commands below have been tested with Codex CLI on Windows.
+
 ## Install
 
 Register the marketplace:

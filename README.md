@@ -19,6 +19,8 @@ Start a new agent thread after installation, then ask:
 Use $nodeflow to plan and execute this change.
 ```
 
+The Codex and Claude Code commands in this README have been tested. The Cursor manifest validates, but Cursor installation depends on Cursor's plugin marketplace flow.
+
 ## How It Works
 
 Nodeflow is not a slash-command system, MCP server, or separate UI. It is a collection of skills.
@@ -73,7 +75,7 @@ Nodeflow includes a Cursor plugin manifest:
 .cursor-plugin/plugin.json
 ```
 
-Use Cursor's plugin installation flow for GitHub-hosted plugins. The manifest points Cursor at the root `skills/` directory.
+Use Cursor's plugin installation flow for GitHub-hosted plugins. The manifest points Cursor at the root `skills/` directory. The manifest has been validated, but this repository does not currently provide a verified Cursor CLI install command.
 
 ### Manual Skills Install
 
