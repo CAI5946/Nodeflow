@@ -1,23 +1,76 @@
-# Nodeflow Skills
+# Nodeflow
 
-Nodeflow is a risk-adaptive workflow skill system for coding agents.
+Nodeflow is a skills-only workflow plugin for coding agents.
 
-It provides one visible entry skill, `nodeflow`, plus focused `nodeflow-*` nodes for planning, execution, review, verification, release preparation, and handoff. The goal is to help agents choose the smallest useful process for each task instead of forcing every request through the same fixed workflow.
+It provides one visible entry skill, `nodeflow`, plus focused `nodeflow-*` nodes for planning, execution, review, verification, release preparation, and handoff. The goal is to help the agent choose the smallest useful process for each task instead of forcing every request through the same fixed workflow.
 
-## Contents
+## Quickstart
 
-- `.codex-plugin/plugin.json`: Codex plugin manifest
-- `skills/nodeflow/`: main orchestration skill and shared references
-- `skills/nodeflow-*`: specialized workflow nodes
-- `agents/openai.yaml`: optional OpenAI/Codex display metadata for each skill
+For Codex:
 
-## Install
+```powershell
+codex plugin marketplace add CAI5946/Nodeflow
+codex plugin add nodeflow@nodeflow
+```
 
-Install this repository as a Codex plugin, or copy the skill directories manually.
+Start a new agent thread after installation, then ask:
 
-For manual installation, copy `skills/nodeflow` and `skills/nodeflow-*` into your agent skills directory.
+```text
+Use $nodeflow to plan and execute this change.
+```
 
-Example:
+## How It Works
+
+Nodeflow is not a slash-command system, MCP server, or separate UI. It is a collection of skills.
+
+Agents can load relevant skills from their descriptions. You can also name a skill directly with `$nodeflow` or a specific node such as `$nodeflow-review`.
+
+## Installation
+
+### Codex CLI
+
+Register this repository as a plugin marketplace:
+
+```powershell
+codex plugin marketplace add CAI5946/Nodeflow
+```
+
+Install the plugin:
+
+```powershell
+codex plugin add nodeflow@nodeflow
+```
+
+Update later:
+
+```powershell
+codex plugin marketplace upgrade nodeflow
+codex plugin add nodeflow@nodeflow
+```
+
+### Claude Code
+
+Nodeflow includes a Claude plugin manifest:
+
+```text
+.claude-plugin/plugin.json
+```
+
+Use Claude Code's plugin installation flow for GitHub-hosted plugins, then start a new thread so Claude can discover the bundled skills.
+
+### Cursor
+
+Nodeflow includes a Cursor plugin manifest:
+
+```text
+.cursor-plugin/plugin.json
+```
+
+Use Cursor's plugin installation flow for GitHub-hosted plugins. The manifest points Cursor at the root `skills/` directory.
+
+### Manual Skills Install
+
+If your agent supports plain skill directories, copy the skill folders manually:
 
 ```powershell
 $skillsRoot = "$HOME\AgentSkills"
@@ -28,20 +81,55 @@ Then restart or refresh your agent so it can rescan skills.
 
 ## Usage
 
-Start with the `nodeflow` skill for most tasks. It will route to the smallest suitable chain based on task risk, scope, and required verification.
+Use the entry skill for most tasks:
 
-For direct use, invoke a specific node such as:
+```text
+Use $nodeflow to plan and execute this change.
+```
 
-- `nodeflow-risk-assessment`
-- `nodeflow-plan`
-- `nodeflow-execute`
-- `nodeflow-review`
-- `nodeflow-verify`
-- `nodeflow-handoff`
+Use a specific node when you know what you need:
 
-## Notes
+```text
+Use $nodeflow-risk-assessment to classify this task before editing.
+```
 
-Nodeflow is tool-agnostic. Some references mention optional capabilities such as browser automation, documentation lookup, calendar or notes tools. Treat those as optional integrations and use the closest available tools in your environment.
+```text
+Use $nodeflow-review to review the current diff.
+```
+
+```text
+Use $nodeflow-verify before claiming this is done.
+```
+
+## Basic Workflow
+
+1. `nodeflow` routes the request.
+2. `nodeflow-risk-assessment` decides scope, risk, document budget, and verification needs.
+3. `nodeflow-plan` creates a task plan only when the work needs one.
+4. `nodeflow-execute` performs the work with the selected execution mode.
+5. `nodeflow-review` checks alignment, regressions, and missing verification.
+6. `nodeflow-verify` confirms results with command output or observable evidence.
+7. `nodeflow-handoff` summarizes changes, risks, and next steps.
+
+## What's Inside
+
+- `skills/nodeflow/`: main entry skill and shared references
+- `skills/nodeflow-*`: specialized workflow nodes
+- `.codex-plugin/plugin.json`: Codex plugin manifest
+- `.agents/plugins/marketplace.json`: Codex marketplace manifest
+- `.claude-plugin/plugin.json`: Claude plugin manifest
+- `.cursor-plugin/plugin.json`: Cursor plugin manifest
+
+## Limitations
+
+- Nodeflow is a skills-only plugin.
+- It does not provide slash commands.
+- It does not start an MCP server.
+- Optional capability skills mentioned inside Nodeflow are not bundled unless they are part of your agent environment.
+
+## More Docs
+
+- [Codex installation and troubleshooting](docs/README.codex.md)
 
 ## License
 

@@ -5,6 +5,8 @@
   "author": {
     "name": "Nodeflow contributors"
   },
+  "homepage": "https://github.com/CAI5946/Nodeflow",
+  "repository": "https://github.com/CAI5946/Nodeflow",
   "license": "MIT",
   "keywords": [
     "agent",
@@ -21,8 +23,16 @@
     "developerName": "Nodeflow contributors",
     "category": "Productivity",
     "capabilities": [
+      "Interactive",
+      "Read",
       "Write"
     ],
-    "defaultPrompt": "Use Nodeflow to plan and execute this task."
+    "defaultPrompt": [
+      "Use Nodeflow to plan and execute this change.",
+      "Use Nodeflow to review the current diff.",
+      "Use Nodeflow to prepare this release."
+    ],
+    "websiteURL": "https://github.com/CAI5946/Nodeflow",
+    "brandColor": "#2563EB"
   }
 }

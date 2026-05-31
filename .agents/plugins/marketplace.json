@@ -1,0 +1,20 @@
+{
+  "name": "nodeflow",
+  "interface": {
+    "displayName": "Nodeflow"
+  },
+  "plugins": [
+    {
+      "name": "nodeflow",
+      "source": {
+        "source": "local",
+        "path": "./"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}
